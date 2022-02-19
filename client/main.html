@@ -1,0 +1,23 @@
+<body>
+  {{>template1}}
+</body>
+
+<template name="template1">
+  {{#template2}}
+    {{>template3}}
+  {{/template2}}
+  {{>template3}}
+  <p>Child components:</p>
+  <ul>
+    {{#each comp in childComponents}}
+      <li>{{comp.template}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="template2">
+  {{>Template.contentBlock}}
+</template>
+
+<template name="template3">
+</template>

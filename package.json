@@ -1,0 +1,12 @@
+{
+  "name": "meteor-blaze-components-child-components-issue-demo",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "jquery": "^3.6.0",
+    "meteor-node-stubs": "^1.1.0"
+  }
+}
