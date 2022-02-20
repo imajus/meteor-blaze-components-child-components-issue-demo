@@ -6,18 +6,47 @@
   {{#template2}}
     {{>template3}}
   {{/template2}}
-  {{>template3}}
-  <p>Child components:</p>
-  <ul>
+  {{>template4}}
+  <p>
+    [template1] Child components:
     {{#each comp in childComponents}}
-      <li>{{comp.template}}</li>
+      {{comp.componentName}}
+    {{else}}
+      N/A
     {{/each}}
-  </ul>
+  </p>
 </template>
 
 <template name="template2">
   {{>Template.contentBlock}}
+  <p>
+    [template2] Child components:
+    {{#each comp in childComponents}}
+      {{comp.componentName}}
+    {{else}}
+      N/A
+    {{/each}}
+  </p>
 </template>
 
 <template name="template3">
+  <p>
+    [template3] Parent component:
+    {{#if parentComponent}}
+      {{parentComponent.componentName}}
+    {{else}}
+      N/A
+    {{/if}}
+  </p>
+</template>
+
+<template name="template4">
+  <p>
+    [template4] Parent component:
+    {{#if parentComponent}}
+      {{parentComponent.componentName}}
+    {{else}}
+      N/A
+    {{/if}}
+  </p>
 </template>
